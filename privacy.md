@@ -1,6 +1,6 @@
 # Deasy Privacy Policy
 
-**Last updated:** September 3, 2026
+**Last updated:** September 12, 2026
 
 ## What we store on your device
 
@@ -16,7 +16,7 @@ Deasy does not sell location data and does not upload a location history to Deas
 
 ## Notifications
 
-Reminders, follow-ups, and the morning briefing are scheduled locally on your device. Notification permission is optional but required for those alerts to appear. Sound preferences (including per work type) stay on the device.
+Reminders, follow-ups, and the morning briefing are scheduled locally on your device. Notification permission is optional but required for those alerts to appear. Sound preferences stay on the device.
 
 ## Voice and AI
 
@@ -32,13 +32,19 @@ Weather for the morning briefing is fetched from Open-Meteo using an approximate
 
 Optional Deasy Pro subscriptions are processed by Apple through the App Store. Payment details are handled by Apple, not by Deasy. We use RevenueCat to verify subscription status on the device. RevenueCat and Apple may process purchase-related identifiers according to their own privacy policies.
 
+## Device calendar sync
+
+If you enable **Sync with device calendar** in Settings, Deasy asks for Calendar permission (on iOS this may include full calendar access). Deasy creates and updates events in a dedicated calendar named **“Deasy,”** and may read your calendars to detect scheduling conflicts and to notice when you delete a synced event in the Calendar app (in that case Deasy removes the matching local record).
+
+Calendar access is optional; nothing is written until you enable sync and grant permission. You can turn sync off anytime. Deasy does not upload your calendar to a Deasy server.
+
 ## Backup and calendar export
 
-You can export a JSON backup or a calendar (.ics) file from Settings. Those files remain on your device until you share them with another app or person. Anyone who receives a shared backup can read its contents.
+You can export a JSON backup or a calendar (.ics) file from Settings. Those files remain on your device until you share them with another app or person. Anyone who receives a shared backup can read its contents. Export is separate from optional device calendar sync.
 
 ## Third-party services
 
-Depending on features you use, Deasy may communicate with: Apple (App Store / StoreKit, and speech recognition when you use voice entry on iOS), Google (Gemini / Maps when configured), Open-Meteo (weather), and RevenueCat (subscription status). Deasy does not sell your personal information.
+Depending on features you use, Deasy may communicate with: Apple (App Store / StoreKit, speech recognition for voice entry, MapKit for place picking on iOS, and EventKit / Calendar when calendar sync is enabled), Google (Gemini for voice parsing; Maps on Android when configured), Open-Meteo (weather), and RevenueCat (subscription status). Deasy does not sell your personal information.
 
 ## Children
 
