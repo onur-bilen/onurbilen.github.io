@@ -1,7 +1,7 @@
 # Deasy
 
-A calm personal assistant for work and events.
+Deasy is a day planner for iPhone. You sign in, keep tasks and events, and can add them by voice.
 
 - [Support](support.html)
 - [Privacy Policy](privacy.html)
-- [Terms of Use (Apple Standard EULA)](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/)
+- [Legal](legal.html)

@@ -1,55 +1,63 @@
 # Deasy Privacy Policy
 
-**Last updated:** September 12, 2026
+**Last updated:** October 25, 2026
 
-## What we store on your device
+This policy describes how Deasy, published by Onur Bilen, handles information. Deasy is an iPhone day planner.
 
-Deasy is designed to keep your information on your device. Your activities, categories, groups, preferences, and settings are stored in a local SQLite database. Deasy does not create a Deasy user account and does not operate its own cloud that stores your tasks.
+## Account
+
+You sign in with Apple or Google. Firebase Authentication stores the account that signs you in. If Apple or Google provides an email address or name, Firebase may store it with that account. Deasy shows the first name from the Apple or Google profile and does not show the email address in the app.
+
+Removing the account in Settings deletes that sign-in. Plans, categories, completions, and saved places stored for the account are kept until you ask us to delete them. Email [onurbilen@gmail.com](mailto:onurbilen@gmail.com) to request that deletion.
+
+## Plans and saved places
+
+Plans, notes, categories, completion history, and saved places are stored in Google Cloud Firestore under your account. A saved place includes the name you give it, its address when one is available, and its coordinates.
+
+A paired Apple Watch can receive plan titles and times so you can view, complete, or snooze them on the watch. That exchange stays between your iPhone and your watch.
+
+## Voice
+
+If you dictate a plan, the iPhone microphone and Apple’s speech recognition convert speech to text. Apple may process that audio under its own terms. Deasy parses the text on the device. Deasy does not send the recording or the transcript to Mixpanel, and it does not store the recording.
 
 ## Location
 
-Location is used only when you choose features that need it: map picking, approximate weather, and optional arrive/leave reminders.
+Location is used for three things:
 
-Those reminders use **region monitoring (geofencing)**, not continuous GPS tracking in the background. They may request **Always** location permission so the operating system can deliver geofence enter and exit events when the app is closed. While the app is open, location may be read occasionally as a fallback if Always permission is not granted.
+- The day’s weather. An approximate position is sent to Open-Meteo to request the forecast. Deasy does not keep a location history.
+- Centering the map when you save a place.
+- Arrival reminders. If a plan is tied to a saved place, iOS can notify you within about 1 km of that place, including while Deasy is closed. That uses region monitoring, not continuous tracking, and needs the Always location permission.
 
-Deasy does not sell location data and does not upload a location history to Deasy servers.
+Saved-place coordinates are stored with the place, as described above. Deasy does not sell location data.
+
+## Calendar
+
+If you allow calendar access, Deasy can write its events to a calendar on your iPhone and read calendars to notice when a linked event was deleted. Calendar content is not uploaded to a Deasy server.
 
 ## Notifications
 
-Reminders, follow-ups, and the morning briefing are scheduled locally on your device. Notification permission is optional but required for those alerts to appear. Sound preferences stay on the device.
+Reminders are scheduled on the device. Notification permission is optional. Without it, alerts do not appear.
 
-## Voice and AI
+## Purchases
 
-If you use voice entry, the system speech recognizer converts your speech to text. On iOS this may use **Apple’s speech recognition service** (audio can be processed by Apple). The resulting text is sent to **Google’s Gemini API** to help fill activity fields.
+Deasy Pro is sold by Apple through the App Store. Apple processes the payment. RevenueCat receives your Firebase user id and the subscription status so the app can tell whether Pro is active. Deasy does not receive your card number.
 
-Do not dictate sensitive information you do not want processed by Apple or Google. In App Store builds the Gemini API key is embedded at compile time and is not editable in Settings. Apple’s and Google’s processing are governed by their own terms and privacy policies.
+## Analytics
 
-## Weather
+Deasy uses Mixpanel to understand product use. Events include opening the app, opening the assistant, adding a task or event, completing a task, opening the paywall, becoming Pro, and connecting a calendar. Mixpanel also receives automatic session information such as app version and device type. The Mixpanel profile is tied to the Firebase user id and stores whether the plan is Pro or free.
 
-Weather for the morning briefing is fetched from Open-Meteo using an approximate location (when available) or a fallback coordinate. Deasy does not create an Open-Meteo account for you.
+Deasy does not send plan titles, notes, speech, email addresses, or location coordinates to Mixpanel.
 
-## Purchases and subscriptions
+## What we do not do
 
-Optional Deasy Pro subscriptions are processed by Apple through the App Store. Payment details are handled by Apple, not by Deasy. We use RevenueCat to verify subscription status on the device. RevenueCat and Apple may process purchase-related identifiers according to their own privacy policies.
-
-## Device calendar sync
-
-If you enable **Sync with device calendar** in Settings, Deasy asks for Calendar permission (on iOS this may include full calendar access). Deasy creates and updates events in a dedicated calendar named **“Deasy,”** and may read your calendars to detect scheduling conflicts and to notice when you delete a synced event in the Calendar app (in that case Deasy removes the matching local record).
-
-Calendar access is optional; nothing is written until you enable sync and grant permission. You can turn sync off anytime. Deasy does not upload your calendar to a Deasy server.
-
-## Backup and calendar export
-
-You can export a JSON backup or a calendar (.ics) file from Settings. Those files remain on your device until you share them with another app or person. Anyone who receives a shared backup can read its contents. Export is separate from optional device calendar sync.
-
-## Third-party services
-
-Depending on features you use, Deasy may communicate with: Apple (App Store / StoreKit, speech recognition for voice entry, MapKit for place picking on iOS, and EventKit / Calendar when calendar sync is enabled), Google (Gemini for voice parsing; Maps on Android when configured), Open-Meteo (weather), and RevenueCat (subscription status). Deasy does not sell your personal information.
+Deasy does not sell personal information. Deasy does not use your plans or speech to train a model.
 
 ## Children
 
-Deasy is not directed at children under 13. If you believe a child has provided personal information through the app, contact us and we will help you remove local data where possible.
+Deasy is not directed at children under 13.
 
 ## Contact
 
-Privacy questions: [onurbilen@gmail.com](mailto:onurbilen@gmail.com). You can also use the developer contact on the App Store product page.
+Privacy questions and deletion requests: [onurbilen@gmail.com](mailto:onurbilen@gmail.com).
+
+Apple’s and Google’s processing of sign-in, speech, maps, and payments is covered by their own policies.
